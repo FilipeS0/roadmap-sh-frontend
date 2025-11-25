@@ -54,7 +54,7 @@ Navegadores, são eles:
 Estes que processam os arquivos HTML, CSS, JavaScript (engine V8) e mostram para o usuario.
 
 ### SEO
-Search Engine Optimization (Otimização de mecanismos de procura), é uma ferramenta 
+Search Engine Optimization (Otimização de mecanismos de procura), é a prática de melhorar sua página web para que mecanismos de busca a encontrem mais facilmente, por exemplo uma pagina bem estruturada com as devidas tags e com um conteudo interessante é essencial para ficar nas primeiras paginas dos sites de pesquisa. Por isso é importante trabalhar bem SEO para que sua webpage se saia bem.
 
 #### TAGS HTML
 ### ```<head>```
