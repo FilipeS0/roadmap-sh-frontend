@@ -56,6 +56,15 @@ Estes que processam os arquivos HTML, CSS, JavaScript (engine V8) e mostram para
 ### SEO
 Search Engine Optimization (Otimização de mecanismos de procura), é a prática de melhorar sua página web para que mecanismos de busca a encontrem mais facilmente, por exemplo uma pagina bem estruturada com as devidas tags e com um conteudo interessante é essencial para ficar nas primeiras paginas dos sites de pesquisa. Por isso é importante trabalhar bem SEO para que sua webpage se saia bem.
 
+## Tags Básicas
+- !DOCTYPE: ```<!DOCTYPE>``` não é uma tag _HTML_, ela é usada para o browser identificar que é um documento HTML.
+- ```<html>``` É a tag raiz, onde contém todas as outras tags html.
+- ```<body>``` O corpo do arquivo HTML, onde se encontra todo o conteúdo.
+- ```<head>``` Onde se encontram os metadados.
+
+## Tags Textuais
+
+
 #### TAGS HTML
 ### ```<head>```
 A tag ```<head>``` é onde ficam os metadados da pagina web, é onde se colocam tags como ```<link>``` que pode linkar ao _CSS_ da pagina, ao _JS_, etc. Também pode 
