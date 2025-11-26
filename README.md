@@ -134,5 +134,10 @@ Usando tags semânticas torna a página mais acessível para humanos e máquinas
 - `<q>` Parecido com o _blockquote_, mas essa tag é melhor utilizada para pequenas citações, até pq diferente da `<blockquote>`, a `<q>` tag é inline level.
 
 ### Tags para layout
-`<header>` Comumente compondo barra de navegação, logo, barra de pesquisa. É a seção que fica no topo do arquivo HTML.
-`<
+`<header>` é um conteúdo introdutório. Comumente compondo barra de navegação, logo, barra de pesquisa. É a seção que fica no topo do arquivo HTML.
+`<nav>` é onde vai ter uma barra de navegação contendo links, pode ser em lista (comumente utilizado) mas também pode ser utilizado como de formas diferentes, mas sempre mantendo a essência de barra de navegação.
+`<main>` deve ser único, é onde fica todo o conteúdo principal, excluindo footer, header/nav
+`<section>` é para quebrar o conteúdo em seção. Define grupos temáticos de conteudo, onde o que está dentro da section tem relação entre si. É comum uma section ter uma tag _HEADING_.
+`<article>` é uma seção onde o conteúdo é completo por si só, o que está dentro de um _article_ não necessita de todo o resto da página para fazer sentido.
+`<aside>` é um texto que acrescenta ao conteúdo principal, mas que se retirado não faz falta. Pode ser usado sidebars, citações...
+`<footer>` fica no fim de um documento HTML, lá estão barras de navegação, contato, copyright, sobre o autor entre outras coisas. Também pode ser utilizado dentro de específicas sections para denotar o fim de um determinado conteúdo.
