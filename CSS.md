@@ -41,7 +41,7 @@ Usando o nome da tag, será algo mais genérico e aplicará em todos os elemento
 Ex.: 
 ```
 p {
-font-size: 16px;
+  font-size: 16px;
 }
 ```
 Todos os elementos `<p>` teram esta propriedade-valor atribuida acima.
@@ -51,7 +51,7 @@ Usando o seletor de classe você faz o que deseja em elementos com esta classe. 
 Ex.:
 ```
 .nome-da-classe {
-background-color: white;
+  background-color: white;
 }
 ```
 Todos os elementos com esta classe terão essa propriedade com este valor citado acima. 
@@ -61,7 +61,7 @@ Usando o seletor de Id você tem o mais alto nível de seletor simples em um CSS
 Ex.:
 ```
 #nome-do-id {
-margin-right: 20px;
+  margin-right: 20px;
 }
 ```
 Em um documento HTML não se deve ter mais de 1 elemento com o mesmo Id, deve ser sempre exclusivo de apenas um elemento.
@@ -71,7 +71,7 @@ O agrupamento de seletores no css é bem simples basta usar uma `,` entre um sel
 Ex.:
 ```
 p, .nome-da-classe, #nome-do-id, div {
-margin: 0
+  margin: 0
 }
 ```
 Assim todos esses elementos vão receber esta propriedade com este valor representado acima.
@@ -80,8 +80,8 @@ Assim todos esses elementos vão receber esta propriedade com este valor represe
 Com o seletor universal todos os elementos vão pegar as propriedades-valor especificado nele.
 ```
 * {
-paddin: 0;
-box-sizing: border-box;
+  paddin: 0;
+  box-sizing: border-box;
 }
 ```
 Muito usado para zerar os valores de margin e padding originais do browser e sobrescrever manualmente futuramente em determinadas tags.
@@ -89,5 +89,97 @@ Muito usado para zerar os valores de margin e padding originais do browser e sob
 ## Seletores combinados
 Seletores Combinados no CSS define a relação entre elementos baseados na posição na estrutura do documento. Eles permitem você _targetar_ elementos que são descendentes, filhos, irmãos adjascentes, ou irmãos no geral de outros elemetos. Isso fornece uma maneira poderosa de aplicar estilos baseados na hierarquia do HTML, indo alem dos simples seletores classe ou id.
 
-* Descendente
-  
+### Descendente
+O combinador descendente é apenas um ` `, um espaço em branco entre dois seletores. Usando o seletor descendente você vai consguir dar _target_ em todos os elementos dentro de um outro elemento que derem _match_ com o nome do seletor.
+Exemplo 1:
+```
+div p {
+  font-size: 20px;
+}
+```
+Assim, com o exemplo acima todos os `<p>` dentro de uma `<div>` terão `font-size: 20px`. Mesmo se um paragrafo estiver dentro de outra tag ela ainda terá a estilização.
+
+### Child
+O combinador _child_ (filho) é utilizado usando `>` entre dois elementos e funciona apenas nos elementos que sao filhos diretos, ou seja, como no exemplo acima em descendente que qualquer paragrafo teria aquela estilização se dentro de uma `<div>`, aqui não acontece assim. Somente os elementos que estão na primeira 'camada' do elemento pai.
+Ex.:
+```
+<div>
+  <p> yada <p/>
+  <nav>
+    <p> yada <p/>
+  <nav/>
+<div/>
+```
+Neste cenário apenas o primeiro paragrafo seria estilizado, caso usasse o Exemplo 1.
+
+### Next Siblling
+O combinador Next Sibling (próximo irmão) é representado pelo símbolo `+`, ele seleciona um elemento que vem logo em seguida do seletor anterior.
+Ex.:
+```
+<div>
+  <p>Donald Duck<p>
+  <p>Donald Duck lives in Duckburg.</p>
+</div>
+
+<div>
+  <span><p>I will not be styled.</p></span>
+  <p>I will not be styled.</p>
+</div>
+
+<p>Donald Duck's best friend is Mickey.</p> ←
+<p>Some other text.</p>
+```
+Se eu usar `div + p` o unico paragrafo que seria selecionado seria o penultimo, por ele ser irmão direto de uma `<div>`.
+
+### Subsequent Sibling
+O combinador Subsequent Sibling (irmão subsequente) seleciona todos os irmãos que compartilham o mesmo pai. É utilizado o `~` como símbolo.
+Ex.:
+```
+<article>
+  <span>This is not red because it appears before any paragraph.</span>
+  <p>Here is a paragraph.</p>
+  <code>Here is some code.</code>
+  <span>
+    This span is red because it appears after the paragraph, even though there
+    are other nodes in between.
+  </span>
+  <p>Whatever it may be, keep smiling.</p>
+  <h1>Dream big</h1>
+  <span>
+    Doesn't matter how many or what kind of nodes are in between, all spans from
+    the same parent after a paragraph are red.
+  </span>
+</article>
+<span>
+  This span is not red because it doesn't share a parent with a paragraph.
+</span>
+```
+Se eu uso alguma estilização com `p ~ span` todos os elementos `<span>` que estão dentro do `<article>` serão estilizados por serem filhas do _article_. Caso estivessem dentro de um `<p>` por exemplo, já não seriam filhos da mesma tag e não funcionaria.
+
+## Seletores de Atributos
+Os seletores de atributos em CSS dão _target_ em elementos HTML baseado na presença ou valor de seus atributos. Eles permitem estilizar elementos mais precisamente que usando apenas nomes de tags ou classes. Por exemplo, eu posso selecionar todos os elementos com uma classe específica, ou apenas aquelas onde o valor do atributo dá _match_ com uma certa string.
+
+- Atributo existent:
+  - `[data-value] {}`
+    
+- Atributo tem este exato valor:
+  - `[data-value="foo"]`
+    
+- Valor do atributo contém este valor em algum lugar nele:
+  - `[data-value*="foo"]`
+    
+- Atributo tem este valor em algum lugar em uma lista separada por espaços:
+  - `[data-value~="foo"]`
+
+- Valor do atributo começa com isto:
+  - `[data-value^="foo"]`
+ 
+- Valor do atributo começa com isto em uma lista separada por ífens (`-`):
+  - `[data-value|="foo"]`
+ 
+- Atributo finaliza com este valor:
+  - `[data-value$="foo"]`
+
+ Obs.: Usar em aspas (`""`) vai funcionar em alguns casos, mas pode ter problema dependendo do browser. Então é recomendado sempre usar.
+
+ 
