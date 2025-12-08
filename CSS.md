@@ -224,3 +224,26 @@ No CSS o termo "background" se refere a propriedade que controla a aparência vi
 - RGBA, HSLA: a adição do sufixo `A` representa sua opacidade.
 
 ## Box Model
+O [box model](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) descreve como elementos em uma webpage são estruturados como caixas retangulares. Cada caixa consiste de conteúdo (texto, imagem, etc), _padding_ (espaço ao redor do conteudo), uma _border_ (uma linha ao redor do _padding_) e uma _margin_ (espaço ao redor da borda). É crucial entender _box-model_ para controlar o tamanho e espaçamento de elementos em uma _webpage_.
+
+## Padding
+[Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding) se refere ao espaço entre o conteudo de um elemento e sua borda. Isso essencialmente cria uma 'almofada' ao redor do conteúdo dentro da box do elemento. Você pode controlar a quantidade de _padding_ em todos os quatro lados de um elemento (top, right, bottom, left) individualmente ou settar um valor uniforme para todos os lados.
+
+## Margin
+[Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin) em CSS define o espaço ao redor da borda de um elemento HTML. Isso cria um _gap_ entre o elemento e outros elementos ao redor em uma pagina web. As margens podem ser _settadas_ em todos os 4 lados de um elemento e pode ter valores negativos ou positivos.
+
+## Width/Height
+[Largura e altura](https://www.programiz.com/css/width-height) em CSS define o tamanho da area de um conteudo. a propriedade `width` setta o espaço horizontal que um elemento ocupa, enquanto a propriedade `height` seta o espaço vertical. Estas propriedades podem ser especificadas usando vários valores unitários como px, %, ou palavras-chave como `auto`.
+
+## Border
+No CSS, a propriedade borda define a linha que rodeia o conteudo e o _padding_ de um elemento HYML. Isso controla o estilo da borda (tipo `solid`, `dashed`, ou `dotted`), largura (grossura da borda) e cor. Você pode settar todas estas propriedades de uma vez usando o atalho `border`, ou individualmente usando `border-style`, `border-width` e `border-color`.
+
+## Outline
+No CSS, a propriedade [outline](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/outline) desenha uma linha ao redor do elemento, fora da borda. Diferente das bordas, _outlines_ não afetam as dimensões do elemento ou a posição no layout. eses são principalmente usadas para destacar elementos, frequentemente por propositos de acessibilidade como indicar foco. Você pode controlar o estilo, cor, e largura do _outline_. Tem os mesmos valores de uma borda `outline-style`, `-color` e `-width`.
+
+## Box Shadows
+[Box shadows](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-shadow) no CSS são efeitos visuais que adicionam profundidade e dimensão ao elemento criando uma sombra ao redor de seus quadros. Estas sombras podem ser customizadas em termos de cores, desvio (distancia horizontal e vertical), raio de desfoque (blur), e raio de propagação (spread), permitindo designers simular várias condições de iluminação e criar interfaces visualmente apelativas. 
+
+## Unidades CSS
+[CSS Units](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units) define o tamanho do elemento e propriedades em uma pagina web. eles especificam como medidas como width, height, font size e margins são interpretadas pelo browser. Estas unidades podem ser absolutas, como px ou cm, ou podem ser relativas, como em, rem, ou viewports (vw, vh), permitindo flexibilidade e responsividade do layout que adapta a diferentes tamanhos de telas e resoluções.
+
