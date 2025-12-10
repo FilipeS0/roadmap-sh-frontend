@@ -364,9 +364,85 @@ Ex. de sintaxe:
 }
 ```
 
-## Media Queries
+## Responsividade
+### Media Queries
 As Media Queries são um recurso que permite você aplicar diferentes estilos do CSS baseado na característica do dispositivo ou tela usada para visualizar uma página web. Isto permite você criar designs responsivos que se adaptam a vários tamanhos de telas, resoluções e orientações, garantindo uma visualização ideal em uma ampla variedade de dispositivos, de desktops a smartphones.
 Ex. de sintaxe:
 `media screen (min-width: 400px) and (max-width: 750px;)`
 
-## Container Queries
+### Container Queries
+Container Queries são um recurso do CSS que permite que estilos sejam aplicado em um elemento baseado em seu tamanho ou outras caracteristicas de seu conteiner, ao inves de sua _viewport_. Isso permite um estilo mais sensivel ao contexto, onde os componentes adaptam sua aparência baseada no espaço disponivel em seu conteiner pai, levando a designs mais flexiveis e reutilizaveis.
+
+### Tipografia responsiva
+Tipografia responsiva é sobre fazer o texto em uma pagina web ter uma boa aparência e seja facilmente legível em diferentes tamanhos de tela e dispositivos. Isso envolve ajustar tamanho de fontes, altura de linhas, espaçamento entre letras e outras propriedades de textos para garantir legibilidade ideal, esteja alguem está visualizando o site em um monitor largo ou um celular pequeno. O objetivo é criar uma experiencia de leitura consistente e prazerosa entre todas as plataformas.
+
+## Variaveis no CSS
+Variáveis no CSS, também conhecidas como propriedades personalizadas, são entidades definidas por autores do CSS que contêm valores específicos para serem reutilizados em uma _stylesheet_. Eles permitem você armazenar um valor em um lugar e então referencia-lo em varios outros lugares, facilitando a manutenção e atualização do codigo CSS. Isto promove consistência e reduz repetições, levando a _stylesheet_ mais eficientes e gerenciáveis.
+Para definir uma variável é só usar`--nome-variavel: valor-da-variável;`. 
+E para usar a variável é só usar:
+```
+:root {
+  --primary-color: blue;
+  --font-size: 16px;
+}
+
+p {
+  color: var(--primary-color);
+  font-size: var(--font-size);
+}
+```
+
+## Funções CSS
+Funções de CSS são operações pré-definidas que fazem tarefas específicas no seu código CSS. Elas permitem você manipular valores, realizar cálculos e gerar resultados dinâmicos, fazendo sua _stylesheets_ mais flexivel e poderosa. Estas funções são usadas nos valores de propriedades CSS para modificar ou criar esses valores com base em determinadas entradas.
+Ex.:
+- `calc()`
+- `rgb()`
+- `rotate()`
+- `translate()`
+- `var()`
+- `url()`
+...
+
+## Best practices
+### Performance
+O desempenho do CSS refere-se à eficiência com que o código CSS é processado e renderizado por um navegador, afetando a velocidade e a capacidade de resposta de um site. Optimizar o CSS para performance envolve técnicas como minimizar tamanho de arquivos, reduzir a complexidade de seletores e aproveitar o cache do navegador para garantir uma experiência de usuário tranquila.
+O que fazer:
+- Remover estilos desnecessários/inutilizados;
+- Dividir o CSS em módulos separados;
+- Minimize e compacte seu CSS (comprimir os arquivos);
+- Simplificar os seletores;
+- Não aplicar estilos a mais elementos que o necessário;
+- Reduza as solicitações HTTP de imagem com sprites CSS (um pouco complexo);
+- _Preload_ ativos importantes;
+...
+
+### Acessibilidade
+Acessibiliade em CSS foca na criação de conteúdo web que é usado por todos, sem considerar suas habilidades ou falta delas. Isto envolve usar HTML semântico, fornecer texto alternativo para imagens, garantir cores de contraste suficiente e projetar layouts navegáveis com tecnologias assistivas, como leitores de tela. Seguindo as práticas recomendadas de acessibilidade, os desenvolvedores podem criar sites inclusivos que proporcionam uma experiência melhor para todos os usuários.
+1. Fornecer alto contraste de cores.
+2. Fornecer boa fonte, tamanho da fonte e altura da linha.
+3. Ter indicadores de foco visíveis.
+4. Evitar esconder o foco.
+5. Usar CSS + HTML semântico.
+6. Respeitar as preferências do usuário.
+
+## Metodologias
+### Sass
+> [!IMPORTANT]
+> REVISAR
+> [Sass](https://www.w3schools.com/sass/) (Syntactically Awesome Style Sheets) é uma linguagem de script de pré-processador compilada em CSS. Estende os recursos do CSS básico, permitindo o uso de recursos variáveis, aninhamento, mixins, funções e herança. Isso torna o CSS mais fácil de manter, organizado e eficiente para escrever.
+
+### PostCSS
+> [!IMPORTANT]
+> REVISAR
+> PostCSS é uma ferramenta que usa JavaScript para transformar CSS. Ele atua como um analisador de CSS e fornece uma API para analisar e modificar o código CSS. É frequentemente usado com plugins para automatizar tarefas como adicionar prefixos de fornecedores, _linting_ CSS ou suporte à sintaxe futura do CSS.
+
+### BEM
+> [!IMPORTANT]
+> REVISAR
+> BEM (Block, Element, Modifier) é uma convenção de nomenclatura CSS que ajuda os desenvolvedores a criar código mais modular , reutilizável e de fácil manutenção. Ele estrutura nomes de classes que refletem a relação entre diferentes partes de uma interface do usuário. Este abordagem facilita entender o propósito de cada regra do CSS e como se relaciona com a estrutura HTML, deixando as _stylesheets_ mais organizadas e estaláveis.
+
+### CSS Modules
+Módulos CSS é um sistema onde nomes de classes CSS e nomes de animação têm escopo local por padrão. Isso significa que os nomes das classes você define em seu arquivo CSS são automaticamente transformados para serem exclusivos, prevenindo colisões de nomes e facilitando o gerenciamento de estilos em projetos grandes. Eles oferecem uma maneira de escrever CSS modular e reutilizável, garantindo que os estilos sejam aplicados somente aos componentes pretendidos.
+
+### CSS-in-JS
+CSS-in-JS é uma tecnica onde estilos CSS são escritos com JS ao invés de arquivos externos de CSS. Esta abordagem permite você usar recursos do JavaScript, como variáveis, lógica e arquitetura baseada em componentes, para gerenciar e aplicar estilos diretamente no seu código JavaScript. Isso oferece beneficios como estilo com escopo definido, estilo dinâmico baseado no estado do componente e gerenciamento mais fácil de projetos CSS complexos.
