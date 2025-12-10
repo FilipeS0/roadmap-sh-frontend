@@ -334,11 +334,39 @@ Grid Layout é um sistema de layout bidimensional para o CSS, possibilitando voc
 ## Animações
 ### Transforms
 Transforms no CSS permite você alterar o formato e a posição de elementos em um espaço bi ou tridimensional. Isto inclui operações como _rotação_ (rotate), _dimensionamento_ (scale), _distorcer_ (skew) e translatar (_translate_) elementos, fornecendo uma maneira de criar efeitos visualmente atraentes e manipular o layout sem afetar o fluxo do documento subjacente.
+```
+.element {
+  transform: translate(20px, 10px);
+}
+```
 
 ### Transitions
 Transições no CSS permite você mudar suavemente valores de propriedades durante um período especificado. Ao inves de uma mudança abrupta, uma transição cria um efeito gradual quando uma propriedade do CSS muda, como ao passar o mouse sobre um elemento ou quando uma classe é adicionado ou removida. Isto adiciona um polimento visual e melhora a experiencia do usuario fazendo interações mais fluidas e responsivas.
+`transition: <propriedade> <duração> <tempo-de-duração-função> <delay>;`
+```
+transition:
+    opacity 1s,
+    display 1s allow-discrete;
+```
 
 ### Keyframes
 Animação Keyframe no CSS permite você controlar os passos intermediários em uma sequencia de animação CSS. Ao inves de só definir o estado do começo e do fim, você pode especificar vários pontos (keyframes) ao longo da linha do tempo da animação, definindo os estilos que um elemento deveria ter em cada ponto. Isto fornece um controle sobre como a aparencia de um elemento muda com o tempo, permitindo animações complexas e visualmente atraentes.
+Ex. de sintaxe:
+``` 
+@keyframes slide-in {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+```
 
 ## Media Queries
+As Media Queries são um recurso que permite você aplicar diferentes estilos do CSS baseado na característica do dispositivo ou tela usada para visualizar uma página web. Isto permite você criar designs responsivos que se adaptam a vários tamanhos de telas, resoluções e orientações, garantindo uma visualização ideal em uma ampla variedade de dispositivos, de desktops a smartphones.
+Ex. de sintaxe:
+`media screen (min-width: 400px) and (max-width: 750px;)`
+
+## Container Queries
