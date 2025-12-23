@@ -88,3 +88,18 @@ Conversão de tipo implícita acontece quando o compilador ou _runtime_ automati
 É uma conversão explicita de um tipo para outro, onde é preciso especificar qual será o novo tipo de dado. Exemplos de métodos de conversão de tipo: `parseInt()`, `parseFloat()`, `toString()`.
 
 ## Estrutura de dados
+Estrutura de dados é um formato de organizar, gerenciar e guardar dados de uma forma que permite acesso e modificação eficiente. JavaScript tem estrturas de dados primitivas (integrados) e não-primitivas (não integrado). Estruturas de dados primitivas vêm por padrão com a linguagem de programação e você pode implementá-las imediatamente (como arrays e objetos). Estruturas de dados não primitivas não vêm por padrão e você precisa 'codá-las' se você quiser usá-las.
+
+### Keyed Structures
+São coleções de dados chaveadas que são ordenadas por chaves e não index. Objetos _map_ e _set_ são coleções chaveadas e são iteráveis na ordem de inserção.
+
+### Structured Data
+Dados estruturados são usados por motores de busca, como Google, para entender o conteudo da página também para juntar informações sobre a web e o mundo em geral.
+É também 'codado' usando marcação na página à qual as informações se aplicam.
+
+### JSON
+JavaScript Object Notation (JSON) é um formato padrão baseado em texto para representar estrutura de dados baseado na sintaxe de objetos de JavaScript. É comumente usado para transmitir dados em aplicações web (enviar algum dado do servidor para o cliente, para ser exibido em uma pagina web, ou vice versa).
+
+
+### Coleções Indexados
+Coleções indexadas são coleções que tem indices numéricos, por exemplo uma coleção de dados que são ordenadas pelo valor do index. Em JavaScript, um array é uma coleção indexada. Uma matriz é um conjunto ordenado de valores que possui um indice numerico.
