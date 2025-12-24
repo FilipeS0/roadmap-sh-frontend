@@ -103,3 +103,34 @@ JavaScript Object Notation (JSON) é um formato padrão baseado em texto para re
 
 ### Coleções Indexados
 Coleções indexadas são coleções que tem indices numéricos, por exemplo uma coleção de dados que são ordenadas pelo valor do index. Em JavaScript, um array é uma coleção indexada. Uma matriz é um conjunto ordenado de valores que possui um indice numerico.
+
+#### Arrays
+Arrays (matrizes) são objetos que armazenam uma coleçção de itens e podem ser atribuidos a uma variável.
+Para declarar um array vazio:
+```
+let arr = new Array();
+let arr = [];
+```
+Sendo que quase todas as vezes a gente usa a primeira forma para criar um array.
+
+## Comparações de igualdade
+Os operadores de comparação são usados em declarações lógicas para determinar igualdade ou diferença entre variáveis ou valores. Operadores de comparação podem ser usados em declarações de condicionais para comparar valores e fazer uma ação dependendo do resultado.
+Alguns tipos de operadores de igualdade:
+- `==`
+- `===`
+- `Object.is`
+
+### Operadores de comparação de valores
+Em JavaScript, o operador `==` converte o tipo dos operandos antes de comparar, enquanto o operador `===` compara os valores e os tipos dos operandos. O método `Object.is` determina se dois valores são o mesmo valor: `Object.is(value1, value2)`.
+`Object.is()` não é equivalente a `==`. O `==` aplica vária coersões para ambos os lados (caso não sejam do mesmo tipo) antes de testar a igualdade (resultando em um comportamento como `"" == false` sendo `true`), mas `Object.is` não faz coersões de valores.
+`Object.is()` também não é equivalente a `===`. A única diferença entre eles é o tratamento dos zeros com sinais e valores `NaN`. O `===` (e o `==`) tratam os valores `-0` e `+0` como iguais, mas tratam `NaN` como não igual a ele mesmo.
+
+## Loops e Iterações
+Loops oferecem uma forma fáci e rápida de fazer algo repetidamente.
+Você pode pensar no loop como uma versão computadorizada de um jogo onde você diz para alguém dar X passos em uma direção, então Y passos em outra. Por exemplo, a ideia "Dê 5 passos para o Leste" poderia ser expressada desta forma como um loop:
+```
+for (let passo = 0; passo < 5; passo++) {
+  // Anda 5 vezes, com valores de passo 0 até passo 4
+  console.log('Andando para o Leste 1 passo');
+}
+```
