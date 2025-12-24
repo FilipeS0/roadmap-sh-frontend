@@ -248,3 +248,22 @@ Como:
 * AggragateError - Uma coleção de erros lançados simultaneamente.
 * EvalError - Um erro que ocorre durante a avaliação de uma expressão JavaScript.
 * InternalError - Um erro interno do JS, frequentemente indicando um bug no mecanismo.
+* RangeError - Um valor está fora do intervalo permitido de uma determinada operação.
+* ReferenceError - Uma variável ou objeto é referenciada antes de ser declarada ou não existe.
+* SyntaxError - O código contém erros de sintax, impedindo que ele seja analisado.
+```
+try {
+  willGiveErrorSometime();
+} catch (error) {
+  if (error instanceof RangeError) {
+    rangeErrorHandler(error);
+  } else if (error instanceof ReferenceError) {
+    referenceErrorHandle(error);
+  } else {
+    errorHandler(error);
+  }
+}
+```
+
+## Expressões e Operadores
+Basicamente, uma expressão é uma unidade de código válida que resulta em um valor. Existem dois tipos de expressões: aquelas que tem efeitos colaterais (como atribuição de valores) e aquelas que são puras. A expressão `x = 7` é um exemplo do primeiro tipo. Esta expressão usa o operador `=` para atribuir o valor sete à varável x. A expressão em si resulta em 7. A expressão `3 + 4` é um exemplo do segundo tipo. Esta expressão usa o operador `+` para adicionar `3` e `4` juntos produzindo um valor, `7`. Entretanto, se eventualmente não fizer parte de uma construção maior (por exemplo, uma declaração de variável como `const z = 3 + 4`) seu resultado será imediatamente descartado. Isto é um geralmente um erro do programador porque o resultado não produz nenhum efeito. Como o resultado acima também ilustram, todas as expressões complexas são combinadas por operadores, como `=` e `+`.
