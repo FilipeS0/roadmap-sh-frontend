@@ -1,11 +1,12 @@
 # Recursos para eu sempre usar
 
-## Normalize
+## CSS
+### Normalize
 Usar o cdn normalize para deixar a pagina web sempre igual em qualquer browser. 
 [Link aqui](https://cdnjs.com/libraries/normalize)
 Para usar o Normalize basta acessar o link acima, copiar o cdn e colar na seção `<head>` do documento HTML.
 
-## Importando fontes
+### Importando fontes
 Para performance, use <link> no <head> para fontes externas. Para fontes locais, use @font-face no CSS. Evite @import no topo do CSS por questões de performance, embora seja uma opção de organização. 
 - Usando `<link>`
 ```
@@ -35,3 +36,8 @@ body {
 }
 ```
 Obs: Usar aspas nos nomes das fontes por convenção
+
+## Requisicao HTTP
+Eh preciso de um IP: `https://link.com`; e um Path: `/api/v2/algo`.
+Tem tambem o tipo de requisicao: GET | POST | PUT | DELETE | PATCH.
+Entao funciona da seguinte forma: eu vou dizer o ip onde vou fazer a solicitacao, o caminho especifico do ip e o metodo que eu estou requisitando
